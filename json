@@ -1,0 +1,93 @@
+# json
+ const carros = [
+    {
+        "nome": "Honda Civic",
+        "valor": "R$ 125.000,00",
+        "quantidade": 10,
+        "peso": 1350,
+        "marca": "Honda",
+        "codigo": 1001
+    },
+    {
+        "nome": "Toyota Corolla",
+        "valor": "R$ 130.000,00",
+        "quantidade": 8,
+        "peso": 1380,
+        "marca": "Toyota",
+        "codigo": 1002
+    },
+    {
+        "nome": "Ford Mustang",
+        "valor": "R$ 350.000,00",
+        "quantidade": 3,
+        "peso": 1700,
+        "marca": "Ford",
+        "codigo": 1003
+    },
+    {
+        "nome": "Chevrolet Onix",
+        "valor": "R$ 75.000,00",
+        "quantidade": 25,
+        "peso": 1100,
+        "marca": "Chevrolet",
+        "codigo": 1004
+    },
+    {
+        "nome": "Volkswagen Golf",
+        "valor": "R$ 140.000,00",
+        "quantidade": 12,
+        "peso": 1280,
+        "marca": "Volkswagen",
+        "codigo": 1005
+    },
+    {
+        "nome": "Hyundai HB20",
+        "valor": "R$ 68.000,00",
+        "quantidade": 20,
+        "peso": 1050,
+        "marca": "Hyundai",
+        "codigo": 1006
+    },
+    {
+        "nome": "Jeep Compass",
+        "valor": "R$ 180.000,00",
+        "quantidade": 7,
+        "peso": 1650,
+        "marca": "Jeep",
+        "codigo": 1007
+    },
+    {
+        "nome": "Renault Kwid",
+        "valor": "R$ 55.000,00",
+        "quantidade": 30,
+        "peso": 980,
+        "marca": "Renault",
+        "codigo": 1008
+    },
+    {
+        "nome": "BMW X6",
+        "valor": "R$ 520.000,00",
+        "quantidade": 2,
+        "peso": 2100,
+        "marca": "BMW",
+        "codigo": 1009
+    },
+    {
+        "nome": "Mercedes-Benz C200",
+        "valor": "R$ 280.000,00",
+        "quantidade": 5,
+        "peso": 1550,
+        "marca": "Mercedes-Benz",
+        "codigo": 1010
+    }
+] 
+// transformar em JSON
+const carrosJSON = JSON.stringify(carros)
+
+// biblioteca para criar arquivos
+const fs = require("fs")
+
+// criar arquivo json
+fs.writeFileSync("banco_de_dados.json", carrosJSON)
+
+console.log("Arquivo criado com sucesso!")
